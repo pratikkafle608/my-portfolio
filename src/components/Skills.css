@@ -1,0 +1,23 @@
+/* src/components/Skills.css */
+
+.skills {
+  padding: 20px;
+  background-color: #0c162c;
+  color: rgb(238, 218, 218);
+  text-align: center;
+}
+
+.skills h2 {
+  color: #7aa2cd;
+  margin-bottom: 20px;
+}
+
+.skills ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.skills li {
+  margin: 10px 0;
+  font-size: 1.2em;
+}

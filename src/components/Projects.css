@@ -1,0 +1,50 @@
+/* src/components/Projects.css */
+
+.projects {
+  padding: 2rem;
+  background-color: #0c162c; /* Match About section */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  margin: 2rem 0;
+  color: #e0e0e0;
+}
+
+.projects-container {
+  display: flex;
+  overflow-x: auto;
+  padding: 1rem;
+  gap: 1.5rem;
+}
+
+.project {
+  min-width: 300px;
+  background-color: #1e1e2f;
+  border: 1px solid #444; /* Slightly darker border for better blending */
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s;
+}
+
+.project:hover {
+  background: #394a8e;
+  box-shadow: 0 6px 15px rgba(63, 81, 181, 0.5);
+  transform: translateY(-5px);
+}
+
+h2 {
+  text-align: center;
+  color: #7aa2cd;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+h3 {
+  color: #7aa2cd;
+  margin-bottom: 0.75rem;
+}
+
+p {
+  color: #cdc0c0;
+  line-height: 1.6;
+}

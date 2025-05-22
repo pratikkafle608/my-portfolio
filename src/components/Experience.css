@@ -1,0 +1,49 @@
+.experience {
+  padding: 40px 20px;
+  background-color: #1e1e2f;
+  color: #f0f0f5;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 40px auto;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.experience h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #4fc3f7;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.experience-item {
+  background: #292942;
+  padding: 20px 25px;
+  border-radius: 8px;
+  box-shadow: inset 0 0 10px #111122;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-item:hover {
+  background: #394a8e;
+  box-shadow: 0 6px 15px rgba(63, 81, 181, 0.5);
+}
+
+.experience-item h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.5rem;
+  color: #81d4fa;
+}
+
+.experience-date {
+  font-size: 1rem;
+  color: #b0bec5;
+  font-weight: 500;
+}
