@@ -7,18 +7,32 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Skills from './components/Skills';
 import Experience from './components/Experience';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import 'aos/dist/aos.css'; // 🟢 Import AOS CSS
 
 
-
 function App() {
-useEffect(()=>{
+  const [loading, setLoading] = useState(true);
+
+  useEffect(()=>{
   AOS.init({
     duration:1000,
     once:true,
   }) ;
+
+  const timeout = setTimeout(() => {
+      setLoading(false);
+    }, 1500);
+    
+    return () => clearTimeout(timeout);
 },[]);
+
+const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
 
   return (
     <div className="App">

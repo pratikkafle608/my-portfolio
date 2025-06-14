@@ -48,3 +48,31 @@ p {
   color: #cdc0c0;
   line-height: 1.6;
 }
+/* Add this to your existing Projects.css without changing anything else */
+.project-link {
+  color: #7aa2cd !important; /* Exact same color as your h3 */
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.project-link:hover {
+  opacity: 0.9;
+  text-decoration: underline;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  margin: 20px 0;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
