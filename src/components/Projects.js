@@ -10,6 +10,35 @@ function Projects() {
 
       <div className="projects-container">
 
+      <div className="project">
+  <h3><a href="https://github.com/pratikkafle608/faq-bot" target="_blank" rel="noopener noreferrer" className="project-link">
+    AI-Powered FAQ Bot</a>
+  </h3>    
+  <p>A conversational AI assistant designed to help international students navigate F1 visa requirements and campus life.</p>
+
+          <div className="project-video">
+            <iframe 
+              width="100%" 
+              height="400" 
+              src="https://www.youtube.com/embed/isDyHbS7n5s" 
+              title="FAQ Bot Demo" 
+              frameBorder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowFullScreen>
+            </iframe>
+          </div>
+
+          <p>Key Features:</p>
+          <ul>
+            <li>Provides guidance on visa requirements, class registration, and campus resources</li>
+            <li>Answers frequently asked questions about international student life</li>
+            <li>Connects students with key contacts (international club president, office staff)</li>
+            <li>Available 24/7 for immediate assistance with common concerns</li>
+          </ul>
+        </div>
+
+
+
         <div className="project">
           <h3>
             <a href="https://github.com/pratikkafle608/Hotel" target="_blank" rel="noopener noreferrer" className="project-link">
@@ -70,6 +99,38 @@ function Projects() {
           </ul>
         </div>
 
+
+        <div className="project">
+  <h3>
+    <a href="https://github.com/pratikkafle608/MusicDatabaseSystem" target="_blank" rel="noopener noreferrer" className="project-link">
+      Music Database System
+    </a>
+  </h3>
+  <p>An Oracle SQL database for managing and analyzing music-related data with robust query capabilities.</p>
+
+  <div className="project-video">
+    <iframe 
+      width="100%" 
+      height="400" 
+      src="https://www.youtube.com/embed/KmXfetaItrM" 
+      title="Music Database System Demo" 
+      frameBorder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowFullScreen>
+    </iframe>
+  </div>
+
+  <p>Key Features:</p>
+  <ul>
+    <li>Four core tables (Artists, Albums, Genres, Songs) with relational constraints</li>
+    <li>Complex query support including joins and aggregate functions</li>
+    <li>Data integrity enforcement through triggers and validation rules</li>
+    <li>Stored procedures for generating custom reports</li>
+    <li>Comprehensive CRUD operations for all music entities</li>
+  </ul>
+</div>
+
+
         <div className="project">
           <h3>
             <a href="https://github.com/pratikkafle608/JavaOopProjects/tree/master/OopJavaProjects/src/OopJavProjects" target="_blank" rel="noopener noreferrer" className="project-link">
@@ -92,34 +153,6 @@ function Projects() {
           </ul>
         </div>
 
-        <div className="project">
-          <h3>
-            <a href="https://github.com/pratikkafle608/MusicDatabaseSystem" target="_blank" rel="noopener noreferrer" className="project-link">
-              Music Database System
-            </a>
-          </h3>
-          <p>An Oracle SQL database for managing and analyzing music-related data with robust query capabilities.</p>
-          <p>Key Features:</p>
-          <ul>
-            <li>Four core tables (Artists, Albums, Genres, Songs) with relational constraints</li>
-            <li>Complex query support including joins and aggregate functions</li>
-            <li>Data integrity enforcement through triggers and validation rules</li>
-            <li>Stored procedures for generating custom reports</li>
-            <li>Comprehensive CRUD operations for all music entities</li>
-          </ul>
-        </div>
-
-        <div className="project">
-          <h3>AI-Powered Chatbot</h3>    
-          <p>A conversational AI assistant designed to help international students navigate F1 visa requirements and campus life.</p>
-          <p>Key Features:</p>
-          <ul>
-            <li>Provides guidance on visa requirements, class registration, and campus resources</li>
-            <li>Answers frequently asked questions about international student life</li>
-            <li>Connects students with key contacts (international club president, office staff)</li>
-            <li>Available 24/7 for immediate assistance with common concerns</li>
-          </ul>
-        </div>
 
         <div className="project">
           <h3>Library Management System</h3>
