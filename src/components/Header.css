@@ -1,3 +1,8 @@
+/*
+  This CSS provides a modern and clean look for the header.
+  - It uses Flexbox to handle the alignment of the h1 and nav elements.
+  - It adds a background, padding, and a box shadow for a professional appearance.
+*/
 .header {
   /* Use Flexbox to align child elements horizontally */
   display: flex;
