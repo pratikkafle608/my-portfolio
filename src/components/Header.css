@@ -31,21 +31,22 @@
   z-index: 1000;
 }
 
-/* Style the navigation links container */
-.header nav {
-  /* This is the key change: use Flexbox and 'gap' for spacing. */
-  display: flex;
-  /* The gap property creates space between the links */
-  gap: 1.5rem;
-  /* Ensure the nav can wrap to the next line on very small screens */
-  flex-wrap: wrap;
-  /* Center the links vertically within the nav container */
-  align-items: center;
 
-  flex-shrink:1;
-  
-  overflow-x:auto;
+.header {
+  display: flex;
+  flex-wrap: wrap; /* Add this */
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #282c34;
+  color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
 }
+
 
 /* Style the navigation links for better appearance */
 .header nav a {
