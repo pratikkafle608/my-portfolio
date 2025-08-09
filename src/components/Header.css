@@ -41,6 +41,10 @@
   flex-wrap: wrap;
   /* Center the links vertically within the nav container */
   align-items: center;
+
+  flex-shrink:1;
+  
+  overflow-x:auto;
 }
 
 /* Style the navigation links for better appearance */
