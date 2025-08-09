@@ -6,7 +6,7 @@
 .header {
   /* Use Flexbox to align child elements horizontally */
   display: flex;
-  /* Space the child elements (h1 and nav) to the far ends of the header */
+  /* Keep the child elements (h1 and nav) on opposite sides */
   justify-content: space-between;
   /* Vertically center the child elements */
   align-items: center;
@@ -31,19 +31,55 @@
   z-index: 1000;
 }
 
-/* Style the navigation links for better spacing and appearance */
+/* Style the navigation links container */
+.header nav {
+  /* This is the key change: use Flexbox and 'gap' for spacing. */
+  display: flex;
+  /* The gap property creates space between the links */
+  gap: 1.5rem;
+  /* Ensure the nav can wrap to the next line on very small screens */
+  flex-wrap: wrap;
+  /* Center the links vertically within the nav container */
+  align-items: center;
+}
+
+/* Style the navigation links for better appearance */
 .header nav a {
-  /* Add space between each link */
-  margin-left: 20px;
   /* Remove the default underline */
   text-decoration: none;
   /* Set the link color to white */
   color: white;
   /* Add a transition for a smooth hover effect */
   transition: color 0.3s ease;
+  /* Add a little padding to make the clickable area larger */
+  padding: 0.5rem 0;
 }
 
 /* Add a hover effect for a better user experience */
 .header nav a:hover {
   color: #61dafb; /* A light blue color for a nice effect */
+}
+
+/* Media query for smaller screens to ensure the navigation bar is fully visible. */
+@media (max-width: 600px) {
+  .header {
+    /* Stack the elements vertically on small screens */
+    flex-direction: column;
+    /* Center the elements */
+    align-items: center;
+    /* Remove fixed position on mobile to prevent content overlap */
+    position: static;
+  }
+
+  .header h1 {
+    /* Add a little margin below the name */
+    margin-bottom: 1rem;
+  }
+
+  .header nav {
+    /* Stack the links vertically for mobile */
+    flex-direction: column;
+    /* Remove the horizontal gap when stacked */
+    gap: 0.5rem;
+  }
 }
