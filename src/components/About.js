@@ -7,7 +7,7 @@ function About() {
       <h2>About Me</h2>
       <div className="about-content">
         <img
-          src="/images/pratik.jpg" // if in public/images
+          src="/images/kafle.jpg" // if in public/images
           alt="Pratik Kafle"
           className="about-image"
         />
