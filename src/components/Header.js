@@ -7,6 +7,7 @@ function Header() {
   return (
     <header className="header">
       <h1>Pratik Kafle</h1>
+    
       <nav>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
