@@ -12,9 +12,12 @@ function About() {
           className="about-image"
         />
         <div className="about-text">
-          <p>Hi, I’m Pratik Kafle, a passionate developer learning UI design with React! I have higher knowledge in backend development with Java and SpringBoot.</p>
-          <p>I’m a 22-year-old male(he/him). I’m deeply interested in exploring AI tools and expanding my understanding of Artificial Neural Networks. As a first-generation student, I’m eager to learn and grow in this field while pursuing my creative interests.</p>
-          <p>On a personal note, I’m also a spiritual person who finds immense joy in helping others whenever I can. The sense of relief and fulfillment that comes from being able to make a positive difference in someone’s life is incredibly soothing for the soul—it’s like therapy for me.</p>
+         <p> I’m Pratik Kafle, a passionate and results-driven Computer Science undergraduate at Texas A&M University–Texarkana, with a strong foundation in software development, AI, and data-driven automation. My academic journey (GPA: 3.86/4.00) is backed by hands-on experience in building real-world solutions—from AI-powered chatbots to database-driven management systems.</p>
+
+         <p>With 3+ years of combined experience in IT support, data automation, and student mentorship, I’ve consistently delivered measurable results—optimizing workflows, improving user satisfaction, and automating complex processes. My toolkit includes Python, Java, SQL, Flask, React.js, and Power BI, with projects that showcase my ability to bridge backend efficiency with frontend usability.</p>
+
+         <p>I thrive in collaborative environments, enjoy solving problems that matter, and am always eager to explore new technologies that push boundaries. Whether it’s building smarter systems or mentoring others, I bring a high level of dedication, curiosity, and impact to every project I work on.</p>
+
         </div>
       </div>
     </section>
