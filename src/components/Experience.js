@@ -10,14 +10,19 @@ function Experience() {
           <h3>FYE Coach</h3>
           <span className="experience-date">May 2024 - May 2025</span>
         </div>
+         <div className="experience-item">
+          <h3>Software Test Engineer</h3>
+          <span className="experience-date">May 2023 - Dec 2025</span>
+        </div>
         <div className="experience-item">
-          <h3>High School Math Tutor</h3>
-          <span className="experience-date">May 2023 - May 2025</span>
+          <h3>Nepal Investment Bank Limited</h3>
+          <span className="experience-date">Feb 2020 - August 2020</span>
         </div>
         <div className="experience-item">
           <h3>IT Support - Kanchan Suppliers</h3>
           <span className="experience-date">July 2019 - May 2022</span>
         </div>
+    
       </div>
     </section>
   );
