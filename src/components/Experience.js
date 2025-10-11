@@ -12,7 +12,7 @@ function Experience() {
         </div>
          <div className="experience-item">
           <h3>Software Test Engineer</h3>
-          <span className="experience-date">May 2023 - Dec 2025</span>
+          <span className="experience-date">May 2023 - Dec 2024</span>
         </div>
         <div className="experience-item">
           <h3>Nepal Investment Bank Limited</h3>
