@@ -16,7 +16,7 @@ function Experience() {
         </div>
         <div className="experience-item">
           <h3>Nepal Investment Bank Limited</h3>
-          <span className="experience-date">Feb 2020 - August 2020</span>
+          <span className="experience-date">May 2021 - Dec 2021</span>
         </div>
         <div className="experience-item">
           <h3>IT Support - Kanchan Suppliers</h3>
