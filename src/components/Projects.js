@@ -10,6 +10,33 @@ function Projects() {
 
       <div className="projects-container">
 
+    <div className="project">
+  <h3><a href="https://github.com/pratikkafle608/No-Food-Left-Behind" target="_blank" rel="noopener noreferrer" className="project-link">
+    No-Food-Left-Behind</a>
+  </h3>    
+  <p>A web application designed to minimize food waste and give back to community solving hunger problem.</p>
+
+          <div className="project-video">
+            <iframe 
+              width="100%" 
+              height="400" 
+              src="https://www.youtube.com/watch?v=3dGaPNtOnc8" 
+              title="FAQ Bot Demo" 
+              frameBorder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowFullScreen>
+            </iframe>
+          </div>
+
+          <p>Key Features:</p>
+          <ul>
+            <li>Partner restaurants can login or if new sign up and add food they're giving away</li>
+            <li>Subscribers get automated email through javamail api about new food update</li>
+            <li>Subcribers can browse food from the database</li>
+          </ul>
+        </div>
+
+
       <div className="project">
   <h3><a href="https://github.com/pratikkafle608/faq-bot" target="_blank" rel="noopener noreferrer" className="project-link">
     AI-Powered FAQ Bot</a>
