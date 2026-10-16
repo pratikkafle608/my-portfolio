@@ -1,52 +1,104 @@
 .header {
-  display: flex;
-  flex-direction: column; /* Stack h1 and nav vertically */
-  align-items: center;     /* Center them horizontally */
-  padding: 1rem 2rem;
-  background-color: #282c34;
-  color: white;
   position: fixed;
   top: 0;
-  width: 100%;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-  z-index: 1000;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: rgba(11, 12, 11, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+  animation: header-in 0.8s var(--ease) both;
 }
 
-.header h1 {
-  margin: 0;               /* Remove default margin */
-  padding-bottom: 0.5rem;  /* Add space below h1 */
+@keyframes header-in {
+  from {
+    transform: translateY(-100%);
+  }
 }
 
-.header nav {
+.statusbar {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 16px;
+  height: 48px;
   display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  justify-content: center;
-  font-size: 0.9rem;
+  align-items: center;
+  gap: 20px;
+  font-size: 0.85rem;
 }
 
-.header nav a {
-  text-decoration: none;
-  color: white;
-  transition: color 0.3s ease;
-  padding: 0.5rem 0;
+.statusbar-brand {
+  color: var(--bg);
+  background: var(--text-bright);
+  padding: 2px 8px;
+  font-weight: 700;
+  white-space: nowrap;
 }
 
-.header nav a:hover {
-  color: #61dafb;
+.statusbar-nav {
+  display: flex;
+  gap: 4px;
+  flex: 1;
+  min-width: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.statusbar-nav::-webkit-scrollbar {
+  display: none;
 }
 
-@media (max-width: 600px) {
-  .header {
-    position: static; /* Remove fixed position on mobile */
+.statusbar-nav a {
+  position: relative;
+  color: var(--text-muted);
+  padding: 4px 10px;
+  white-space: nowrap;
+  transition: color 0.25s, background-color 0.25s;
+}
+.statusbar-nav a:hover {
+  color: var(--text-bright);
+  background: var(--surface-2);
+}
+.statusbar-nav a.active {
+  color: var(--bg);
+  background: var(--text);
+}
+.nav-index {
+  color: var(--dim);
+  margin-right: 2px;
+}
+.statusbar-nav a.active .nav-index {
+  color: var(--surface-2);
+}
+.nav-star {
+  margin-left: 1px;
+}
+
+.statusbar-clock {
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.scroll-progress {
+  height: 2px;
+  background: var(--text-bright);
+  transform-origin: left;
+  transform: scaleX(0);
+  will-change: transform;
+}
+
+@media (max-width: 640px) {
+  .statusbar {
+    gap: 10px;
+    font-size: 0.78rem;
   }
-
-  .header nav {
-    flex-direction: column;
-    gap: 0.5rem;
+  .statusbar-brand {
+    display: none;
   }
-
-  .header h1 {
-    margin-bottom: 0.5rem;
+  .nav-index {
+    display: none;
+  }
+  .statusbar-nav a {
+    padding: 4px 8px;
   }
 }

@@ -1,24 +1,57 @@
-.contact {
-    text-align: center;
-    padding: 2rem;
-    background-color: #100808;
-  }
-  
-  .social-links {
-    margin-top: 1rem;
-  }
-  
-  .social-icon {
-    font-size: 2rem;
-    margin: 0 1rem;
-    color: #333;
-    transition: color 0.3s ease;
-  }
-  
-  .social-icon:hover {
-    color: #0077b5; /* LinkedIn blue */
-  }
-  
-  .social-icon[aria-label="github"]:hover {
-    color: #333; /* GitHub black */
-  }
+.contact-intro {
+  margin: 0 0 14px;
+}
+
+.contact-list {
+  list-style: none;
+  margin: 0 0 26px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.contact-list li {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 4px 14px;
+}
+
+.contact-key {
+  min-width: 80px;
+  color: var(--text-muted);
+}
+.contact-arrow {
+  color: var(--dim);
+  transition: transform 0.3s var(--ease), color 0.3s;
+}
+.contact-list li:hover .contact-arrow {
+  transform: translateX(6px);
+  color: var(--text-bright);
+}
+
+.contact-link {
+  color: var(--text-bright);
+  font-weight: 700;
+  word-break: break-all;
+  background-image: linear-gradient(var(--text-bright), var(--text-bright));
+  background-size: 0 1px;
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 0.4s var(--ease);
+}
+.contact-link:hover {
+  background-size: 100% 1px;
+}
+
+.footer {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 40px 0 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}

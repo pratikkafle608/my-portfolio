@@ -1,23 +1,92 @@
 /* src/components/Skills.css */
 
-.skills {
-  padding: 20px;
-  background-color: #0c162c;
-  color: rgb(238, 218, 218);
-  text-align: center;
+.skills-root {
+  margin: 0 0 14px;
+  font-weight: 700;
 }
 
-.skills h2 {
-  color: #7aa2cd;
-  margin-bottom: 20px;
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 14px;
 }
 
-.skills ul {
-  list-style-type: none;
+.skill-group {
+  position: relative;
+  padding: 16px 18px 18px;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  transition:
+    opacity 0.7s var(--ease) var(--delay, 0ms),
+    transform 0.8s var(--ease) var(--delay, 0ms),
+    filter 0.7s var(--ease) var(--delay, 0ms),
+    border-color 0.3s;
+}
+.skill-group::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--text-bright);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.35s var(--ease);
+}
+.skill-group:hover {
+  border-color: var(--border-strong);
+}
+.skill-group:hover::before {
+  transform: scaleY(1);
+}
+
+.skill-group-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+.skill-dir {
+  color: var(--amber);
+  font-weight: 700;
+}
+.skill-count {
+  font-size: 0.72rem;
+  color: var(--dim);
+  white-space: nowrap;
+}
+.skill-group-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin: 2px 0 12px;
+}
+
+.skill-tags {
+  list-style: none;
+  margin: 0;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.skill-tag {
+  font-size: 0.8rem;
+  padding: 3px 9px;
+  color: var(--text);
+  border: 1px solid var(--border-strong);
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s, transform 0.2s var(--ease);
+}
+.skill-tag:hover {
+  color: var(--bg);
+  background: var(--text-bright);
+  border-color: var(--text-bright);
+  transform: translateY(-2px);
 }
 
-.skills li {
-  margin: 10px 0;
-  font-size: 1.2em;
+@media (max-width: 640px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
 }
