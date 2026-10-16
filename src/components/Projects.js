@@ -29,6 +29,7 @@ const PROJECTS = [
     name: 'No-Food-Left-Behind',
     slug: 'no-food-left-behind',
     url: 'https://github.com/pratikkafle608/No-Food-Left-Behind',
+    links: [{ label: 'live demo', href: 'https://no-food-lb.onrender.com/' }],
     description: 'A web application designed to minimize food waste and give back to community solving hunger problem.',
     video: { id: '3dGaPNtOnc8', title: 'No-Food-Left-Behind Demo' },
     sections: [
