@@ -27,7 +27,7 @@ function About() {
       <div className="neofetch">
         <Reveal className="neofetch-photo" variant="left">
           <img
-            src="/images/kafle.jpg" // if in public/images
+            src={`${process.env.PUBLIC_URL}/images/kafle.jpg`}
             alt="Pratik Kafle"
             className="about-image"
           />

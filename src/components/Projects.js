@@ -12,7 +12,7 @@ const PROJECTS = [
     links: [{ label: 'live app', href: 'https://pratik-aspire-a315-53g.tail3e22ba.ts.net/' }],
     date: 'June 2026',
     tech: ['Java', 'Spring Boot', 'React', 'MySQL'],
-    image: { src: '/images/ecotrac.jpg', alt: 'EcoTrac Route Optimizer login screen' },
+    image: { src: `${process.env.PUBLIC_URL}/images/ecotrac.jpg`, alt: 'EcoTrac Route Optimizer login screen' },
     description: 'An LLM-orchestrated route planner that analyzes live traffic and recommends eco-friendly routes emitting up to 20% less CO2.',
     sections: [
       {
