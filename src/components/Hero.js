@@ -1,26 +1,11 @@
 /* src/components/Hero.js */
 
-import React, { useEffect, useRef, useState } from 'react';
-import { Prompt, TypedText } from './Terminal';
+import React, { useEffect, useRef } from 'react';
 import { prefersReducedMotion } from '../hooks/useInView';
 import './Hero.css';
 
-const BOOT_LINES = [
-  'Mounting /home/pratik',
-  'Loading skills.module',
-  'Indexing projects/',
-  'Starting portfolio.service',
-];
-
 function Hero() {
   const heroRef = useRef(null);
-  const [startTyping, setStartTyping] = useState(false);
-  const [typed, setTyped] = useState(false);
-
-  useEffect(() => {
-    const id = setTimeout(() => setStartTyping(true), prefersReducedMotion() ? 0 : 1300);
-    return () => clearTimeout(id);
-  }, []);
 
   // Parallax: drift the hero content up and fade it out as the page scrolls.
   useEffect(() => {
@@ -44,36 +29,23 @@ function Hero() {
   }, []);
 
   return (
-    <section id="top" className={`hero ${typed ? 'typed' : ''}`} ref={heroRef}>
+    <section id="top" className="hero" ref={heroRef}>
       <div className="hero-inner">
-        <div className="boot">
-          {BOOT_LINES.map((line, i) => (
-            <div key={line} className="boot-line" style={{ '--i': i }}>
-              <span className="boot-ok">[  OK  ]</span> {line}
-            </div>
-          ))}
-        </div>
-
-        <Prompt cursor={!typed}>
-          <TypedText text="whoami" start={startTyping} speed={90} onDone={() => setTyped(true)} />
-        </Prompt>
-
         <div className="hero-output">
-          <h1 className="hero-name">
-            Pratik Kafle<span className="cursor cursor-big" aria-hidden="true" />
-          </h1>
+          <p className="hero-greeting">Hi, I'm</p>
+          <h1 className="hero-name">Pratik Kafle</h1>
           <p className="hero-line">
-            <span className="hl">&gt;</span> Software Engineer · Java test automation · Full-stack &amp; AI development
+            Software Engineer · Java test automation · Full-stack &amp; AI development
           </p>
           <p className="hero-line">
-            <span className="hl">&gt;</span> B.S. Computer Science @ Texas A&amp;M University–Texarkana
+            B.S. Computer Science @ Texas A&amp;M University–Texarkana
           </p>
-          <p className="hero-line dim"># 1.5+ yrs test automation @ Caterpillar · GPA 3.86 · Spring Boot, React, LLM APIs</p>
+          <p className="hero-line dim">1.5+ yrs test automation @ Caterpillar · GPA 3.86 · Spring Boot, React, LLM APIs</p>
 
           <div className="hero-actions">
-            <a href="#about" className="btn">./about</a>
-            <a href="#projects" className="btn">./projects</a>
-            <a href="#contact" className="btn btn-solid">./contact</a>
+            <a href="#about" className="btn">About me</a>
+            <a href="#projects" className="btn">View projects</a>
+            <a href="#contact" className="btn btn-solid">Get in touch</a>
           </div>
         </div>
       </div>

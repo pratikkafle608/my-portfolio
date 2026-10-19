@@ -1,7 +1,7 @@
 /* src/components/Skills.js */
 
 import React from 'react';
-import { Window, Reveal } from './Terminal';
+import { Section, Reveal } from './Section';
 import './Skills.css';
 
 const SKILL_GROUPS = [
@@ -49,16 +49,11 @@ const SKILL_GROUPS = [
 
 function Skills() {
   return (
-    <Window id="skills" index="02" title="skills" command="tree ~/skills">
-      <Reveal as="p" className="skills-root hl">~/skills</Reveal>
+    <Section id="skills" index="02" title="Skills">
       <div className="skills-grid">
         {SKILL_GROUPS.map((group, i) => (
-          <Reveal key={group.dir} className="skill-group" delay={(i % 2) * 90} variant="scale">
-            <div className="skill-group-head">
-              <span className="skill-dir">{group.dir}/</span>
-              <span className="skill-count">{group.items.length} items</span>
-            </div>
-            <div className="skill-group-label">{group.label}</div>
+          <Reveal key={group.dir} className="skill-group card" delay={(i % 2) * 90} variant="scale">
+            <h3 className="skill-group-label">{group.label}</h3>
             <ul className="skill-tags">
               {group.items.map((item) => (
                 <li key={item} className="skill-tag">{item}</li>
@@ -67,7 +62,7 @@ function Skills() {
           </Reveal>
         ))}
       </div>
-    </Window>
+    </Section>
   );
 }
 

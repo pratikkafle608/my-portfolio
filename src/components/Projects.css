@@ -9,15 +9,11 @@
 .project {
   position: relative;
   padding: 22px 24px 24px;
-  background: var(--surface-2);
-  border: 1px solid var(--border);
+  overflow: hidden;
   transition:
     opacity 0.7s var(--ease) var(--delay, 0ms),
     transform 0.8s var(--ease) var(--delay, 0ms),
     border-color 0.3s;
-}
-.project:hover {
-  border-color: var(--border-strong);
 }
 .project::before {
   content: '';
@@ -29,7 +25,7 @@
   background: var(--text-bright);
   transition: width 0.9s var(--ease) 0.3s;
 }
-.section.typed .project.is-visible::before {
+.project.is-visible::before {
   width: 64px;
 }
 
@@ -39,12 +35,6 @@
   flex-wrap: wrap;
   gap: 6px 14px;
   font-size: 0.8rem;
-}
-.project-count {
-  color: var(--dim);
-}
-.project-path {
-  color: var(--amber);
 }
 .project-date {
   color: var(--text-muted);
@@ -58,7 +48,8 @@
 .project-repo {
   color: var(--text-muted);
   border: 1px solid var(--border-strong);
-  padding: 2px 10px;
+  border-radius: 999px;
+  padding: 2px 12px;
   transition: color 0.25s, border-color 0.25s, background-color 0.25s;
 }
 .project-repo:hover {
@@ -104,6 +95,7 @@
   padding: 2px 8px;
   color: var(--cyan);
   border: 1px solid var(--border-strong);
+  border-radius: 999px;
 }
 
 .project-body.has-video {
@@ -117,6 +109,8 @@
   position: relative;
   aspect-ratio: 16 / 9;
   border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  overflow: hidden;
   background: #000;
 }
 .project-video iframe {
@@ -130,25 +124,9 @@
 .project-shot {
   margin: 0;
   border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
   background: #0f1312;
   overflow: hidden;
-}
-.project-shot-bar {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  padding: 7px 10px;
-  background: var(--surface);
-  border-bottom: 1px solid var(--border);
-}
-.project-shot-bar .dot {
-  width: 9px;
-  height: 9px;
-}
-.project-shot-title {
-  margin-left: 8px;
-  font-size: 0.72rem;
-  color: var(--dim);
 }
 .project-shot img {
   display: block;
@@ -181,10 +159,14 @@
   font-size: 0.9rem;
 }
 .project-section li::before {
-  content: '>';
+  content: '';
   position: absolute;
-  left: 0;
-  color: var(--text-bright);
+  left: 4px;
+  top: 0.7em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--text-bright);
 }
 .project-section strong {
   color: var(--text-bright);

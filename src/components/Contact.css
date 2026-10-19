@@ -1,5 +1,6 @@
 .contact-intro {
-  margin: 0 0 14px;
+  margin: 0 0 22px;
+  max-width: 70ch;
 }
 
 .contact-list {

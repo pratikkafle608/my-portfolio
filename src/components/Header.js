@@ -5,14 +5,9 @@ import './Header.css';
 
 const SECTIONS = ['about', 'skills', 'projects', 'experience', 'contact'];
 
-function formatTime(date) {
-  return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: false });
-}
-
 function Header() {
   const [active, setActive] = useState('');
   const [progress, setProgress] = useState(0);
-  const [time, setTime] = useState(() => formatTime(new Date()));
 
   useEffect(() => {
     let frame = null;
@@ -42,24 +37,17 @@ function Header() {
     };
   }, []);
 
-  useEffect(() => {
-    const id = setInterval(() => setTime(formatTime(new Date())), 15000);
-    return () => clearInterval(id);
-  }, []);
-
   return (
     <header className="header">
       <div className="statusbar">
-        <a href="#top" className="statusbar-brand">[pratik kafle]</a>
+        <a href="#top" className="statusbar-brand">Pratik Kafle</a>
         <nav className="statusbar-nav" aria-label="Sections">
-          {SECTIONS.map((id, i) => (
+          {SECTIONS.map((id) => (
             <a key={id} href={`#${id}`} className={active === id ? 'active' : ''}>
-              <span className="nav-index">{i + 1}:</span>{id}
-              {active === id && <span className="nav-star">*</span>}
+              {id[0].toUpperCase() + id.slice(1)}
             </a>
           ))}
         </nav>
-        <span className="statusbar-clock">{time}</span>
       </div>
       <div className="scroll-progress" style={{ transform: `scaleX(${progress})` }} />
     </header>

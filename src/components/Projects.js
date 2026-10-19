@@ -1,7 +1,7 @@
 /* src/components/Projects.js */
 
 import React from 'react';
-import { Window, Reveal } from './Terminal';
+import { Section, Reveal } from './Section';
 import './Projects.css';
 
 const PROJECTS = [
@@ -9,7 +9,7 @@ const PROJECTS = [
     name: 'EcoTrac – AI-Powered Carbon-Efficient Route Optimizer',
     slug: 'ecotrac',
     url: 'https://github.com/pratikkafle608/EcoRoute',
-    links: [{ label: 'live app', href: 'https://pratik-aspire-a315-53g.tail3e22ba.ts.net/' }],
+    links: [{ label: 'Live app', href: 'https://pratik-aspire-a315-53g.tail3e22ba.ts.net/' }],
     date: 'June 2026',
     tech: ['Java', 'Spring Boot', 'React', 'MySQL'],
     image: { src: `${process.env.PUBLIC_URL}/images/ecotrac.jpg`, alt: 'EcoTrac Route Optimizer login screen' },
@@ -29,7 +29,7 @@ const PROJECTS = [
     name: 'No-Food-Left-Behind',
     slug: 'no-food-left-behind',
     url: 'https://github.com/pratikkafle608/No-Food-Left-Behind',
-    links: [{ label: 'live demo', href: 'https://no-food-lb.onrender.com/' }],
+    links: [{ label: 'Live demo', href: 'https://no-food-lb.onrender.com/' }],
     description: 'A web application designed to minimize food waste and give back to community solving hunger problem.',
     video: { id: '3dGaPNtOnc8', title: 'No-Food-Left-Behind Demo' },
     sections: [
@@ -162,14 +162,10 @@ const PROJECTS = [
   },
 ];
 
-const pad = (n) => String(n).padStart(2, '0');
-
-function Project({ project, index, total }) {
+function Project({ project }) {
   return (
-    <Reveal as="article" className="project">
+    <Reveal as="article" className="project card">
       <header className="project-head">
-        <span className="project-count">[{pad(index + 1)}/{pad(total)}]</span>
-        <span className="project-path">./{project.slug}</span>
         {project.date && <span className="project-date">{project.date}</span>}
         <span className="project-links">
           {(project.links || []).map((link) => (
@@ -179,7 +175,7 @@ function Project({ project, index, total }) {
           ))}
           {project.url && (
             <a href={project.url} target="_blank" rel="noopener noreferrer" className="project-repo">
-              git clone ↗
+              GitHub ↗
             </a>
           )}
         </span>
@@ -204,12 +200,6 @@ function Project({ project, index, total }) {
       <div className={`project-body ${project.video || project.image ? 'has-video' : ''}`}>
         {project.image && (
           <figure className="project-shot">
-            <div className="project-shot-bar">
-              <span className="dot dot-red" />
-              <span className="dot dot-yellow" />
-              <span className="dot dot-green" />
-              <span className="project-shot-title">{project.slug}</span>
-            </div>
             <img src={project.image.src} alt={project.image.alt} loading="lazy" />
           </figure>
         )}
@@ -230,7 +220,7 @@ function Project({ project, index, total }) {
           {project.sections.map((section) => (
             <div key={section.heading} className="project-section">
               <p className="project-section-head">
-                <span className="dim">## </span>{section.heading}:
+                {section.heading}
               </p>
               <ul>
                 {section.items.map((item) => (
@@ -251,13 +241,13 @@ function Project({ project, index, total }) {
 
 function Projects() {
   return (
-    <Window id="projects" index="03" title="projects" command="ls ~/projects | xargs cat">
+    <Section id="projects" index="03" title="Projects">
       <div className="projects-list">
-        {PROJECTS.map((project, i) => (
-          <Project key={project.slug} project={project} index={i} total={PROJECTS.length} />
+        {PROJECTS.map((project) => (
+          <Project key={project.slug} project={project} />
         ))}
       </div>
-    </Window>
+    </Section>
   );
 }
 

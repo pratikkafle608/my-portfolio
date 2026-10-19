@@ -29,9 +29,7 @@
 }
 
 .statusbar-brand {
-  color: var(--bg);
-  background: var(--text-bright);
-  padding: 2px 8px;
+  color: var(--text-bright);
   font-weight: 700;
   white-space: nowrap;
 }
@@ -39,7 +37,7 @@
 .statusbar-nav {
   display: flex;
   gap: 4px;
-  flex: 1;
+  margin-left: auto;
   min-width: 0;
   overflow-x: auto;
   scrollbar-width: none;
@@ -52,6 +50,7 @@
   position: relative;
   color: var(--text-muted);
   padding: 4px 10px;
+  border-radius: var(--radius);
   white-space: nowrap;
   transition: color 0.25s, background-color 0.25s;
 }
@@ -60,23 +59,8 @@
   background: var(--surface-2);
 }
 .statusbar-nav a.active {
-  color: var(--bg);
-  background: var(--text);
-}
-.nav-index {
-  color: var(--dim);
-  margin-right: 2px;
-}
-.statusbar-nav a.active .nav-index {
-  color: var(--surface-2);
-}
-.nav-star {
-  margin-left: 1px;
-}
-
-.statusbar-clock {
-  color: var(--text-muted);
-  white-space: nowrap;
+  color: var(--text-bright);
+  background: var(--surface-2);
 }
 
 .scroll-progress {
@@ -93,9 +77,6 @@
     font-size: 0.78rem;
   }
   .statusbar-brand {
-    display: none;
-  }
-  .nav-index {
     display: none;
   }
   .statusbar-nav a {

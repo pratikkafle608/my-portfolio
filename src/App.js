@@ -11,7 +11,6 @@ import Experience from './components/Experience';
 function App() {
   return (
     <div className="App">
-      <div className="crt" aria-hidden="true" />
       <Header />
       <main className="main">
         <Hero />

@@ -18,7 +18,7 @@
   transform-origin: top;
   transition: transform 1.4s var(--ease) 0.2s;
 }
-.section.typed .gitlog::before {
+.section.in-view .gitlog::before {
   transform: scaleY(1);
 }
 
@@ -55,11 +55,12 @@
   gap: 8px;
   font-size: 0.85rem;
 }
-.commit-hash {
-  color: var(--amber);
-}
 .commit-ref {
-  color: var(--cyan);
+  padding: 0 8px;
+  font-size: 0.75rem;
+  color: var(--bg);
+  background: var(--text-bright);
+  border-radius: 999px;
 }
 .commit-date {
   font-size: 0.85rem;
@@ -81,8 +82,7 @@
 .commit-points {
   list-style: none;
   margin: 12px 0 0;
-  padding: 12px 0 0;
-  border-top: 1px dashed var(--border);
+  padding: 0;
   max-width: 80ch;
 }
 .commit-points li {
@@ -92,9 +92,12 @@
   font-size: 0.9rem;
 }
 .commit-points li::before {
-  content: '+';
+  content: '';
   position: absolute;
-  left: 0;
-  color: var(--text-bright);
-  font-weight: 700;
+  left: 4px;
+  top: 0.7em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--text-bright);
 }

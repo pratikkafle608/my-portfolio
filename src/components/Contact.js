@@ -1,21 +1,21 @@
 /* src/components/Contact.js */
 
 import React from 'react';
-import { Window, Reveal, Prompt } from './Terminal';
+import { Section, Reveal } from './Section';
 import './Contact.css';
 
 const LINKS = [
-  { key: 'email', label: 'pratikkafle.intern@gmail.com', href: 'mailto:pratikkafle.intern@gmail.com' },
-  { key: 'linkedin', label: 'LinkedIn', href: 'https://www.linkedin.com/in/pratik-kafle-263076189/' },
-  { key: 'github', label: 'Github', href: 'https://github.com/pratikkafle608' },
+  { key: 'Email', label: 'pratikkafle.intern@gmail.com', href: 'mailto:pratikkafle.intern@gmail.com' },
+  { key: 'LinkedIn', label: 'linkedin.com/in/pratik-kafle', href: 'https://www.linkedin.com/in/pratik-kafle-263076189/' },
+  { key: 'GitHub', label: 'github.com/pratikkafle608', href: 'https://github.com/pratikkafle608' },
 ];
 
 function Contact() {
   return (
     <>
-      <Window id="contact" index="05" title="contact" command="cat contact.txt">
+      <Section id="contact" index="05" title="Contact">
         <Reveal as="p" className="contact-intro">
-          <span className="dim"># Contact Me</span>
+          Feel free to reach out — I'm always happy to connect.
         </Reveal>
         <ul className="contact-list">
           {LINKS.map((link, i) => (
@@ -24,7 +24,7 @@ function Contact() {
               <span className="contact-arrow">→</span>
               <a
                 href={link.href}
-                target={link.key === 'email' ? undefined : '_blank'}
+                target={link.key === 'Email' ? undefined : '_blank'}
                 rel="noopener noreferrer"
                 className="contact-link"
               >
@@ -33,14 +33,10 @@ function Contact() {
             </Reveal>
           ))}
         </ul>
-        <Reveal delay={500}>
-          <Prompt cursor />
-        </Reveal>
-      </Window>
+      </Section>
 
       <footer className="footer">
         <span>© {new Date().getFullYear()} Pratik Kafle</span>
-        <span className="dim">process exited with code 0</span>
       </footer>
     </>
   );

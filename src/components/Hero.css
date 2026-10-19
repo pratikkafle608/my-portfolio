@@ -15,45 +15,36 @@
   filter: blur(calc(var(--hero-scroll) * 4px));
 }
 
-/* ---------- boot sequence ---------- */
-.boot {
-  margin-bottom: 28px;
-  font-size: 0.85rem;
-  color: var(--text-muted);
-}
-.boot-line {
+/* ---------- intro, staggered in on load ---------- */
+.hero-output > * {
   opacity: 0;
-  animation: boot-in 0.3s steps(2) forwards;
-  animation-delay: calc(var(--i) * 0.22s + 0.2s);
+  animation: hero-in 0.8s var(--ease) forwards;
 }
-.boot-ok {
-  color: var(--text-bright);
-  font-weight: 700;
-}
+.hero-output > :nth-child(2) { animation-delay: 0.1s; }
+.hero-output > :nth-child(3) { animation-delay: 0.25s; }
+.hero-output > :nth-child(4) { animation-delay: 0.35s; }
+.hero-output > :nth-child(5) { animation-delay: 0.45s; }
+.hero-output > :nth-child(6) { animation-delay: 0.6s; }
 
-@keyframes boot-in {
+@keyframes hero-in {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
   to {
     opacity: 1;
+    transform: none;
   }
 }
 
-/* ---------- output after `whoami` ---------- */
-.hero-output > * {
-  opacity: 0;
-  transform: translateY(18px);
-  transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+.hero-greeting {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: clamp(1rem, 2.4vw, 1.2rem);
 }
-.hero.typed .hero-output > * {
-  opacity: 1;
-  transform: none;
-}
-.hero.typed .hero-output > :nth-child(2) { transition-delay: 0.15s; }
-.hero.typed .hero-output > :nth-child(3) { transition-delay: 0.3s; }
-.hero.typed .hero-output > :nth-child(4) { transition-delay: 0.45s; }
-.hero.typed .hero-output > :nth-child(5) { transition-delay: 0.6s; }
 
 .hero-name {
-  margin: 18px 0 18px;
+  margin: 6px 0 18px;
   font-size: clamp(2.6rem, 9vw, 5.6rem);
   line-height: 1.05;
   font-weight: 800;
@@ -61,23 +52,6 @@
   color: var(--text-bright);
   text-shadow: 0 0 24px rgba(90, 247, 142, 0.18);
 }
-.hero.typed .hero-name {
-  animation: glitch 0.6s steps(2) 0.1s 1;
-}
-.cursor-big {
-  width: 0.5em;
-  height: 0.85em;
-  margin-left: 0.12em;
-  vertical-align: baseline;
-}
-
-@keyframes glitch {
-  0% { text-shadow: 3px 0 var(--cyan), -3px 0 var(--red); transform: translateX(-2px); }
-  25% { text-shadow: -3px 0 var(--cyan), 3px 0 var(--red); transform: translateX(2px); }
-  50% { text-shadow: 2px 0 var(--cyan), -2px 0 var(--red); transform: translateX(-1px); }
-  100% { text-shadow: 0 0 24px rgba(90, 247, 142, 0.18); transform: none; }
-}
-
 .hero-line {
   margin: 4px 0;
   font-size: clamp(0.9rem, 2.2vw, 1.05rem);
@@ -98,6 +72,7 @@
   display: inline-block;
   padding: 10px 18px;
   border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
   color: var(--text);
   font-size: 0.9rem;
   position: relative;
