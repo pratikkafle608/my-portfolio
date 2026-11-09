@@ -11,7 +11,7 @@ const PROJECTS = [
     links: [{ label: 'Live app', href: 'https://pratik-aspire-a315-53g.tail3e22ba.ts.net:8443' }],
     date: 'November 2026',
     tech: ['Python', 'Django', 'React', 'TypeScript', 'MySQL', 'Ollama', 'Docker'],
-    image: { src: `${process.env.PUBLIC_URL}/images/selfonomics.jpg`, alt: 'Selfonomics Market page with a stock watchlist, price chart, and AI-summarized news' },
+    image: { src: `${process.env.PUBLIC_URL}/images/selfonomics.jpg`, alt: 'Selfonomics Market page with a stock watchlist, price chart, and AI-summarized news', fit: 'contain' },
     description: 'A self-hosted personal finance app that imports bank transactions, tracks a stock watchlist, and answers questions about your money using a local LLM.',
     sections: [
       {
@@ -219,7 +219,12 @@ function Project({ project }) {
       <div className={`project-body ${project.video || project.image ? 'has-video' : ''}`}>
         {project.image && (
           <figure className="project-shot">
-            <img src={project.image.src} alt={project.image.alt} loading="lazy" />
+            <img
+              src={project.image.src}
+              alt={project.image.alt}
+              loading="lazy"
+              style={project.image.fit ? { objectFit: project.image.fit } : undefined}
+            />
           </figure>
         )}
         {project.video && (
