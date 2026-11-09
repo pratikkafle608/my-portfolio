@@ -6,6 +6,25 @@ import './Projects.css';
 
 const PROJECTS = [
   {
+    name: 'Selfonomics – AI-Powered Personal Finance Assistant',
+    slug: 'selfonomics',
+    links: [{ label: 'Live app', href: 'https://pratik-aspire-a315-53g.tail3e22ba.ts.net:8443' }],
+    date: 'November 2026',
+    tech: ['Python', 'Django', 'React', 'TypeScript', 'MySQL', 'Ollama', 'Docker'],
+    image: { src: `${process.env.PUBLIC_URL}/images/selfonomics.jpg`, alt: 'Selfonomics Market page with a stock watchlist, price chart, and AI-summarized news' },
+    description: 'A self-hosted personal finance app that imports bank transactions, tracks a stock watchlist, and answers questions about your money using a local LLM.',
+    sections: [
+      {
+        heading: 'Highlights',
+        items: [
+          'Built a format-agnostic CSV importer with duplicate detection and layered auto-categorization, combining keyword rules with a scikit-learn model trained only on user-confirmed labels.',
+          'Created a market dashboard with live watchlist prices, price history charts, pandas risk metrics, technical indicators, and AI-summarized news headlines.',
+          'Grounded a local Ollama chat assistant in the user\'s own data, with a server-side fact check that replaces stock figures the model misstates.',
+        ],
+      },
+    ],
+  },
+  {
     name: 'EcoTrac – AI-Powered Carbon-Efficient Route Optimizer',
     slug: 'ecotrac',
     url: 'https://github.com/pratikkafle608/EcoRoute',
