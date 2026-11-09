@@ -26,7 +26,7 @@ function About() {
       <div className="about-intro">
         <Reveal className="about-photo" variant="left">
           <img
-            src={`${process.env.PUBLIC_URL}/images/kafle.jpg`}
+            src={`${process.env.PUBLIC_URL}/images/profile.jpg`}
             alt="Pratik Kafle"
             className="about-image"
           />
